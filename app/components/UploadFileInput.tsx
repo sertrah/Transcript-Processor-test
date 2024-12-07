@@ -11,7 +11,7 @@ const removeClass = (element: HTMLDivElement | null) => {
   if (element) element.classList.remove(style.has_file);
 };
 
-const DragAndDropInput: React.FC<{
+const UploadFileInput: React.FC<{
   setFiles: (files: File[]) => void;
   removeFile: () => void;
 }> = ({ setFiles, removeFile }) => {
@@ -101,4 +101,4 @@ const DragAndDropInput: React.FC<{
   );
 };
 
-export default DragAndDropInput;
+export default UploadFileInput;

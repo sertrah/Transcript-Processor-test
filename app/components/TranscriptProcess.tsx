@@ -6,7 +6,7 @@ import useTranscriptionManager from "../utils/useTranscriptionManager";
 
 // Components
 import HeroContainer from "./HeroContainer";
-import UploadFileInput from "./DragAndDropInput";
+import UploadFileInput from "./UploadFileInput";
 import ErrorBoundary from "./ErrorBoundary";
 
 const AISummaryAndKeyPoints = dynamic(() => import("./AISummaryAndKeyPoints"), {
