@@ -1,5 +1,67 @@
 .container {
-    border: 1px solid black;
-    width: 100%;
-    height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgb(148, 144, 110);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.uploadContainer {
+  width: 18rem;
+  height: 4rem;
+  padding: 1rem;
+  padding-bottom: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(1.5rem);
+}
+
+.container:hover {
+  background-color: rgb(170, 165, 119);
+  border-color: rgb(176, 172, 130);
+  transition: all 0.5s ease-in-out;
+}
+
+.removeFileBtn {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(115, 3, 14);
+  border: 1px solid rgb(78, 4, 4);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(12rem);
+}
+
+.container.has_file .uploadContainer,
+.container.has_file .removeFileBtn {
+  transform: translateY(0);
+}
+
+.container.has_file .default_text{
+  display: none;
+}
+
+.text_attached{
+  display: none;
+}
+.container.has_file .text_attached{
+  display: block;
+  font-weight: bold;
+}
+
+.fileUpload {
+  display: none;
 }

@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: linear-gradient(#cac8b7, #9b998e);
   --foreground: #171717;
 }
 
@@ -19,6 +19,8 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
+  background-repeat: no-repeat;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,8 +37,43 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.text {
+  opacity: 1;
+}
+
+.text-red {
+  background-color: rgb(117, 4, 4);
+  color: #fff;
+  padding: 0.5rem 3rem;
+  border-radius: 2rem;
+  font-weight: 400;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.fade-in {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+}
+
+.char {
+  opacity: 0;
+}
+
+.loading {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="none" stroke-opacity="1" stroke="%235a5d5a" stroke-width=".5" cx="100" cy="100" r="0"><animate attributeName="r" calcMode="spline" dur="3.4" values="1;80" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-width" calcMode="spline" dur="3.4" values="0;25" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" calcMode="spline" dur="3.4" values="1;0" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate></circle></svg>');
+}
+
+.transcription__container {
+  position: relative;
+  width: 100%;
+  min-height: 32rem;
 }
